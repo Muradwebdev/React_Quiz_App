@@ -88,7 +88,7 @@ const App = () => {
     return acc + cur.points;
   }, 0);
   useEffect(() => {
-    fetch("/data/question.json")
+    fetch("./data/question.json")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((error) => dispatch({ type: "dataFailed", payload: error }));
