@@ -4,7 +4,7 @@ const Options = () => {
   const { question, dispatch, answer } = useQuestions();
   const hasAnswered = answer !== null;
   // console.log("question", question);
-  const objectFromArray = question.options.replace(/^{|}$/g, "").split(","); // SubaBaseden {} seklinde gelirdi
+  const objectFromArray = question.options.replace(/^{|}$/g, "").split(","); // SubaBaseden {} seklinde gelirdi deye etdin yadda saxla
   // console.log(arrOption, "arroptio");
 
   return (
