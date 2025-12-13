@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 import Error from "./Components/Error";
 import { useQuestions } from "./Contexts/QuestionsContext";
 
-const App = () => {
+const App = ({dispatch}) => {
   const { status } = useQuestions();
   return (
     <div className="app">
@@ -20,7 +20,7 @@ const App = () => {
       <Main>
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
-        {status === "ready" && <StartScreen />}
+        {status === "ready" && <StartScreen dispatch={dispatch} />}
         {status === "active" && (
           <>
             <Progress />

@@ -1,7 +1,7 @@
 import { useQuestions } from "../Contexts/QuestionsContext";
 
 const NextButton = () => {
-  const { dispatch, answer, countQuestions, index } = useQuestions;
+  const { dispatch, answer, countQuestions, index } = useQuestions();
   if (answer === null) return null;
   if (index !== countQuestions - 1)
     return (
