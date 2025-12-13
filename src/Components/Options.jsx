@@ -1,12 +1,10 @@
 import { useQuestions } from "../Contexts/QuestionsContext";
 
 const Options = () => {
-  const { questions, dispatch, answer, index } = useQuestions();
+  const { question, dispatch, answer } = useQuestions();
   const hasAnswered = answer !== null;
   // console.log("question", question);
-  const objectFromArray = questions[index].options
-    .replace(/^{|}$/g, "")
-    .split(","); // SubaBaseden {} seklinde gelirdi
+  const objectFromArray = question.options.replace(/^{|}$/g, "").split(","); // SubaBaseden {} seklinde gelirdi
   // console.log(arrOption, "arroptio");
 
   return (
@@ -16,7 +14,7 @@ const Options = () => {
           <button
             className={`btn btn-option  ${index === answer ? "answer" : ""} ${
               hasAnswered
-                ? index === questions[index].correctOption
+                ? index === question.correctOption
                   ? "correct"
                   : "wrong"
                 : ""

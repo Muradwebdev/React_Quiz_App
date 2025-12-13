@@ -109,6 +109,7 @@ const QuestionProvider = ({ children }) => {
         countQuestions,
         maxPossiblePoint,
         dispatch,
+        question: questions[index],
       }}
     >
       {children}

@@ -2,10 +2,10 @@ import { useQuestions } from "../Contexts/QuestionsContext";
 import Options from "./Options";
 
 const Question = () => {
-  const { questions, index } = useQuestions();
+  const { question } = useQuestions();
   return (
     <div>
-      <h4>{questions[index].questions}</h4>
+      <h4>{question.questions}</h4>
       <Options />
     </div>
   );
